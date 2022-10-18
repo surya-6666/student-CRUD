@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-primary fw-bold">
+                Students-List
+            </p>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro alias sapiente id. Beatae quod itaque harum nemo magni natus, autem eveniet optio, hic odio temporibus tempore unde fuga architecto facere!</p>
+        </div>
+        <div class="row">
+            <!-- Alert message -->
+            <div *ngIf="message" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong class="text-center">Deleted Successfully</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <table class="table">
+                <thead class="table table-dark text-white table-center">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let
+                     st of students">
+                        <td>{{st.id}}</td>
+                        <td>{{st.name}}</td>
+                        <td>{{st.email}}</td>
+                        <td>{{st.phone}}</td>
+                        <td>{{st.city}}</td>
+                        <td>
+                            <a routerLink="/edit/{{st.id}}" class="btn btn-success  me-1">Edit</a>
+                            <button (click)="deleteStudent(st.id)" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+</div>

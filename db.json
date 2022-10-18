@@ -1,0 +1,35 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Surya",
+      "email": "surya.guthula2@gmail.com",
+      "phone": "8888855556",
+      "city": "Hyderabad"
+    },
+    {
+      "id": 2,
+      "name": "Mahesh",
+      "email": "mahesh@gmail.com",
+      "phone": "9046667666",
+      "city": "Ranchi"
+    },
+    {
+      "id": 4,
+      "name": "bhavya",
+      "email": "bhavya@gmail.com",
+      "phone": "1234564561",
+      "city": "Ahmedabad"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
