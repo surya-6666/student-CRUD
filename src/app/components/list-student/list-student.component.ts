@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/models/Student';
 import { StudentService } from 'src/app/services/student.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-student',
@@ -8,27 +9,27 @@ import { StudentService } from 'src/app/services/student.service';
   styleUrls: ['./list-student.component.css']
 })
 export class ListStudentComponent implements OnInit {
-  message!:boolean;
   students:Student[]=[];
+ id!:number;
+ message!:boolean
 
-  constructor(private service:StudentService) { }
+  constructor(private service:StudentService,private actRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.service.getStudents().subscribe((data)=>{
-      this.students =data
+    this.service.getAllStudents().subscribe((response)=>{
+      this.students =response;
     });
+let id= this.actRoute.snapshot.params['id'];
 
   }
+
+ 
   deleteStudent(id:number){
-    // console.log(id);
     this.service.deleteStudent(id).subscribe((student)=>{
-  
-      this.ngOnInit();
-      this.message=true;
+      this.message= true;
+      this.ngOnInit()
       
     })
-    
   }
-
 
 }

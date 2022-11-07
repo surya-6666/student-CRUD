@@ -1,0 +1,60 @@
+{
+  "students": [
+    {
+      "name": "SuryaKumar",
+      "email": "surya.guthula2@gmail.com",
+      "phone": 8888855555,
+      "city": "Mumbai-99",
+      "id": 1
+    },
+    {
+      "name": "MaheshBabu",
+      "email": "mahesh@gmail.com",
+      "phone": "9046667666",
+      "city": "Ranchi-11",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "name": "bhavya",
+      "email": "bhavya@gmail.com",
+      "phone": "1234564561",
+      "city": "Ahmedabad"
+    },
+    {
+      "name": "Anand",
+      "email": "anand@gmail.com",
+      "phone": 9849098490,
+      "city": "Ahmedabad",
+      "id": 5
+    },
+    {
+      "name": "Kavya",
+      "email": "kavya@email.com",
+      "phone": 8367479999,
+      "city": "karimNagar",
+      "id": 7
+    },
+    {
+      "name": "Anjali",
+      "email": "anjali@email.com",
+      "phone": 9849011111,
+      "city": "NewDelhi",
+      "id": 8
+    },
+    {
+      "name": "Lakshmi",
+      "email": "lakshmi@email.com",
+      "phone": 9849088556,
+      "city": "Mummidivaram",
+      "id": 9
+    },
+    {
+      "name": "Lavanya",
+      "email": "lavu@gmail.com",
+      "phone": 9299200885,
+      "city": "Lucknow",
+      "id": 10
+    }
+  ]
+}

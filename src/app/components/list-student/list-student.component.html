@@ -1,46 +1,50 @@
-
+<p>list-student works!</p>
 <div class="container">
     <div class="row">
         <div class="col">
-            <p class="h3 text-primary fw-bold">
-                Students-List
-            </p>
-            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro alias sapiente id. Beatae quod itaque harum nemo magni natus, autem eveniet optio, hic odio temporibus tempore unde fuga architecto facere!</p>
+            <p class="h3 text-danger">Students-List</p>
+            <p class="fst-itallic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid fuga voluptatum libero, consequatur eveniet obcaecati consectetur necessitatibus autem deleniti. Sed mollitia aspernatur, dolore accusantium reprehenderit quisquam esse, aliquam temporibus, a officiis architecto nam vel debitis iste eum ea? Sequi, voluptate!</p>
         </div>
-        <div class="row">
-            <!-- Alert message -->
-            <div *ngIf="message" class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong class="text-center">Deleted Successfully</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-            <table class="table">
-                <thead class="table table-dark text-white table-center">
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-center table-light table-stripped">
+
+                <thead class="table bg-dark text-white text-center">
                     <tr>
-                        <th>Id</th>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>City</th>
                         <th>Action</th>
-                    </tr>
+                    </tr >
+
                 </thead>
                 <tbody>
-                    <tr *ngFor="let
-                     st of students">
-                        <td>{{st.id}}</td>
-                        <td>{{st.name}}</td>
-                        <td>{{st.email}}</td>
-                        <td>{{st.phone}}</td>
-                        <td>{{st.city}}</td>
+                    <tr *ngFor="let student of students">
+                        <td>{{student.id}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.email}}</td>
+                        <td>{{student.phone}}</td>
+                        <td>{{student.city}}</td>
                         <td>
-                            <a routerLink="/edit/{{st.id}}" class="btn btn-success  me-1">Edit</a>
-                            <button (click)="deleteStudent(st.id)" class="btn btn-danger">Delete</button>
+                            <a class="btn btn-info btn-sm me-1" routerLink="/edit/{{student.id}}">Edit</a>
+                            <button (click)="deleteStudent(student.id)" class="btn btn-danger btn-sm">Delete</button>
+                            
                         </td>
+
                     </tr>
+
+
+
                 </tbody>
 
-
             </table>
+            <div >
+              
+              
+            </div>
         </div>
     </div>
 </div>

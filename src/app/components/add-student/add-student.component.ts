@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/models/Student';
 import { StudentService } from 'src/app/services/student.service';
-import{FormGroup,FormControl} from '@angular/forms'
+import{FormGroup,FormControl}from '@angular/forms';
 
 @Component({
   selector: 'app-add-student',
@@ -9,27 +9,45 @@ import{FormGroup,FormControl} from '@angular/forms'
   styleUrls: ['./add-student.component.css']
 })
 export class AddStudentComponent implements OnInit {
+  student!:Student;
+  message!:boolean;
 
   constructor(private service:StudentService) { }
-  public message!:boolean
-  addstudent=new FormGroup({
-    id:new FormControl(''),
+  addStudent=new FormGroup({
     name:new FormControl(''),
     email:new FormControl(''),
     phone:new FormControl(''),
     city:new FormControl('')
+
   })
 
   ngOnInit(): void {
+    // this.service.CreateStudent(student:Student).subscribe((student)=>{
+    //   console.log(student);
+      
+    // })
   }
-  saveData(){
-    console.log(this.addstudent.value);
-this.service.saveStudent(this.addstudent.value).subscribe((result)=>{
-  // console.log(result);
-  this.message=true
-  this.addstudent.reset({});
-  
-})
-  }
+  createData(){
+    console.log(this.addStudent.value);
+    this.service.saveStudent(this.addStudent.value).subscribe((response)=>{
+      this.student= response;
+      this.message= true;
+      this.addStudent.reset({});
 
-}
+      
+    }
+    )
+
+    
+   
+      
+    }
+    
+   
+      
+    }
+ 
+    
+  
+
+
